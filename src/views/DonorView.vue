@@ -96,11 +96,7 @@ export default {
   methods: {
     ...mapActions(useDonorStore, ["getData", "storeData"]),
     store() {
-      this.storeData(
-        (this.donor.id = this.donor.name
-          .replaceAll(" ", "-")
-          .toLowerCase())
-      );
+      this.storeData();
       this.$swal({
         icon: "success",
         title: "Cadastro efetuado com sucesso",

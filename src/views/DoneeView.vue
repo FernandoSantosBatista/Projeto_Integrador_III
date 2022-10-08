@@ -73,17 +73,13 @@ export default {
   methods: {
     ...mapActions(useDoneeStore, ["getData", "storeData"]),
     store() {
-      this.storeData(
-        (this.donee.id = this.donee.name
-          .replaceAll(" ", "-")
-          .toLowerCase())
-      );
+      this.storeData()
       this.$swal({
         icon: "success",
         title: "Cadastro efetuado com sucesso",
         confirmButtonColor: "#FF8800",
         animate: true,
-      })
+      });
       this.$router.push("/");
     },
   },
