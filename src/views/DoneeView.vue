@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="form container">
     <div class="row">
       <div class="text-center">
@@ -53,12 +54,13 @@
       />
     </div>
 
-    <div class="d-md-flex justify-content-md-end">
+    <div class="button d-md-flex justify-content-md-end">
       <button @click="store" class="btn btn-outline-primary btn-lg px-5">
         Enviar
       </button>
     </div>
   </div>
+</body>
 </template>
 
 <script>
@@ -92,5 +94,9 @@ export default {
 <style>
 .form {
   margin-top: 80px;
+}
+.form-control{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
 }
 </style>

@@ -1,5 +1,4 @@
 <template>
-  <body>
     <div class="container-fluid">
       <div class="hero-image">
         <div class="hero-text p3">
@@ -83,7 +82,6 @@
         ></router-link>
       </div>
     </div>
-  </body>
 </template>
 
 <script>
@@ -104,15 +102,14 @@ export default {
 };
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap');
+
 .obj {
   background: #f8f9fa;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
+p{
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .qd {
@@ -123,13 +120,22 @@ body {
 
 h1 {
   font-size: 40px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .h3 {
   margin-top: 30px;
   margin-bottom: 30px;
+  font-family: 'Josefin Sans', sans-serif;
 }
-
+.bi-chevron-double-left:hover{
+  color: #ff8800;
+  text-decoration: none;
+}
+.bi-chevron-double-right:hover{
+  color: #ff8800;
+  text-decoration: none;
+}
 .bi-font {
   text-decoration: none;
   color: #212529;
@@ -163,6 +169,8 @@ h1 {
   position: relative;
   margin-bottom: 60px;
   margin-top: 60px;
+  background-color: rgb(243, 243, 243);
+
 }
 .hero-text {
   text-align: center;
@@ -181,14 +189,14 @@ h1 {
 .container-md,
 .container-sm {
   max-width: 960px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .title {
   color: rgb(4, 10, 92);
+  font-family: 'Josefin Sans', sans-serif;
 }
 .text {
   font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 a {
   text-decoration: none;
@@ -207,6 +215,7 @@ a:hover {
   text-align: justify;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
+
 }
 .shadow:hover {
   border: 1.5px solid #ff8800;

@@ -5,7 +5,10 @@
         <a href="/"> Home </a>
       </li>
       <li>
-        <a href="/sobre"> Sobre</a>
+        <a href="/doar"> doar</a>
+      </li>
+      <li>
+        <a href="/sobre"> entenda </a>
       </li>
     </ul>
   </nav>
