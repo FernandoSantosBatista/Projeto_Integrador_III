@@ -9,7 +9,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import App from "./App.vue";
 import router from "./router";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://admin-apoioaplv.herokuapp.com";
 
 
 const app = createApp(App);
