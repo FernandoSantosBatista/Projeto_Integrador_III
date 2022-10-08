@@ -17,9 +17,9 @@ export const useDoneeStore = defineStore({
       });
     },
 
-    storeData(post) {
-      axios.post(`/donee/`, post).then((response) => {
-        this.donee = response.data;
+    storeData() {
+      axios.post(`/donee/`, this.donee).then((response) => {
+        response.data;
       });
     },
   },

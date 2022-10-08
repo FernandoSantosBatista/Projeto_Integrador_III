@@ -17,9 +17,10 @@ export const useDonorStore = defineStore({
       });
     },
 
-    storeData(post) {
-      axios.post(`/donor/`, post).then((response) => {
-        this.donor = response.data;
+
+    storeData() {
+      axios.post(`/donor/`, this.donor).then((response) => {
+       response.data;
       });
     },
   },

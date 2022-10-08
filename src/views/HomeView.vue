@@ -104,9 +104,6 @@ export default {
 };
 </script>
 <style>
-.list {
-  background-color: #212529;
-}
 .obj {
   background: #f8f9fa;
 }
