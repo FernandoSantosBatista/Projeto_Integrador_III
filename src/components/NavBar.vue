@@ -4,11 +4,15 @@
       <li class="nav-item">
         <a href="/"> Home </a>
       </li>
+      
       <li>
-        <a href="/doar"> doar</a>
+        <a href="/sobre"> Entenda </a>
       </li>
       <li>
-        <a href="/sobre"> entenda </a>
+        <a href="/doacao"> Formulas</a>
+      </li>
+      <li>
+        <a href="/doar"> Doar</a>
       </li>
     </ul>
   </nav>

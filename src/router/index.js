@@ -3,7 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import DonorView from "../views/DonorView.vue";
 import DoneeView from "../views/DoneeView.vue";
 import AboutView from "../views/AboutView.vue";
-
+import PageView from "../views/PageView.vue";
+import DonationController from "../views/DonationController.vue";
 
 
 
@@ -16,6 +17,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/obter-de-graca-a-formula-para-criancas",
+      name: "page",
+      component: PageView,
+    },
+    {
       path: "/doar",
       name: "Donor",
       component: DonorView,
@@ -24,6 +30,11 @@ const router = createRouter({
       path: "/cadastro",
       name: "Donee",
       component: DoneeView,
+    },
+    {
+      path: "/doacao",
+      name: "Donation",
+      component: DonationController,
     },
     {
       path: "/sobre",
