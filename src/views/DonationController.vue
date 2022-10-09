@@ -1,18 +1,11 @@
 <template>
     <div class="container-fluid">
-      <div class="donation text-center">
-        <h2><strong>Área de doação: Relação de Cadastrados</strong></h2>
-        <p>
-          Clique no cadastro mais próximo de sua residência para realizar a
-          doação.
-        </p>
-      </div>
-
+      
       <div class="container">
         
         
       </div>
-      <div class="col-12 container">
+      <div class="col-12 list container">
         <h4 class="text-center" style="margin-bottom: 20px">
           Fórmulas disponiveis para doação. <br />
           Faça o cadastro clicando abaixo.
@@ -64,4 +57,9 @@ export default {
   },
 };
 </script>
+<style >
+.list{
+    margin-top: 120px;
+}
+</style>
 
