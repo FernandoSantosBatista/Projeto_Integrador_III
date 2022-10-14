@@ -9,3 +9,4 @@ describe("HomeView", () => {
     expect(wrapper.text()).toContain("Hello Vitest");
   });
 });
+// test npx cypress open --component
