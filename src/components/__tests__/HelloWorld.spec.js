@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 
 import { mount } from "@vue/test-utils";
-import HelloWorld from "../HomeView.vue";
+import HomeView from "../HomeView.vue";
 
-describe("HelloWorld", () => {
+describe("HomeView", () => {
   it("renders properly", () => {
-    const wrapper = mount(HelloWorld, { props: { msg: "Hello Vitest" } });
+    const wrapper = mount(HomeView, { props: { msg: "Hello Vitest" } });
     expect(wrapper.text()).toContain("Hello Vitest");
   });
 });
