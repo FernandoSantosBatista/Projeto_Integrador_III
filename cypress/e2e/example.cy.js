@@ -1,8 +1,8 @@
-import AboutView from './AboutView.vue'
+// https://docs.cypress.io/api/introduction/api.html
 
-describe('<AboutView />', () => {
-  it('renders', () => {
-    // see: https://test-utils.vuejs.org/guide/
-    cy.mount(AboutView)
-  })
-})
+describe("My First Test", () => {
+  it("visits the app root url", () => {
+    cy.visit("https://apoioaplv.netlify.app/");
+   
+  });
+});
