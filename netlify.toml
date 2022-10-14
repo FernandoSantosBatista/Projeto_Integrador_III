@@ -11,10 +11,22 @@
 CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 # set TERM variable for terminal output
 TERM = "xterm"
+# do not print too many progress messages
+CI = "1"
 
 [[plugins]]
-# runs Cypress tests against the deployed URL
-package = "netlify-plugin-cypress"
+  # local Cypress plugin will test our site after it is built
+  # in production, please use: package = "netlify-plugin-cypress"
+  package = "../../"
+
+  # run Cypress tests once on the site before it is built
+  # and then after building the static folder
+
+  [plugins.inputs]
+    # these settings apply to the default step onSuccess
+    # in this case, we do not want to run any tests after deploy
+    enable = false
+
 
 
 
