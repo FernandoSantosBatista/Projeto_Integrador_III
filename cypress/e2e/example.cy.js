@@ -2,7 +2,7 @@
 
 describe("My First Test", () => {
   it("visits the app root url", () => {
-    cy.visit("/");
+    cy.visit("https://apoioaplv.netlify.app/");
     cy.get("h2").should("contain", "O que é APLV ??");
     cy.get(".navbar").contains("Entenda").click();
   });
@@ -13,7 +13,7 @@ describe("My First Test", () => {
     cy.go("forward");
   }),
     it("cy.visit() - visit a remote url", () => {
-      cy.visit("/doar", {
+      cy.visit("https://apoioaplv.netlify.app//doar", {
         timeout: 50000,
         onBeforeLoad(contentWindow) {
           // contentWindow is the remote page's window object
