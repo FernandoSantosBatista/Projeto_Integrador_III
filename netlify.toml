@@ -26,7 +26,12 @@ CI = "1"
     # these settings apply to the default step onSuccess
     # in this case, we do not want to run any tests after deploy
     enable = false
-
+[plugins.inputs.postBuild]
+    enable = true
+    # must allow our test server to redirect unknown routes to "/"
+    # so that client-side routing can correctly route them
+    # can be set to true or "index.html" (or similar fallback filename in the built folder)
+    spa = true
 
 
 
