@@ -13,11 +13,16 @@ CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 TERM = "xterm"
 
 [[plugins]]
-  package = "netlify-plugin-cypress"
-  [plugins.inputs]
-    # run E2E tests against the deployed URL
-    record = true
-    group = 'deployed'
+# runs Cypress tests against the deployed URL
+package = "netlify-plugin-cypress"
+
+
+[plugins.inputs]
+    enable = false
+
+  # run and record tests post build
+  [plugins.inputs.postBuild]
+    enable = true
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
