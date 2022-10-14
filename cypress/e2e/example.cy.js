@@ -1,9 +1,8 @@
-// https://docs.cypress.io/api/introduction/api.html
+import AboutView from './AboutView.vue'
 
-describe('html-pages', () => {
-  it('loads the index page', () => {
-    cy.visit('/')
-    cy.contains('Index page')
+describe('<AboutView />', () => {
+  it('renders', () => {
+    // see: https://test-utils.vuejs.org/guide/
+    cy.mount(AboutView)
   })
-
-});
+})
