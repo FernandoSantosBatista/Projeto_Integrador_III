@@ -5,21 +5,17 @@
   publish = "dist"
 
   [build.environment]
-# cache Cypress binary in local "node_modules" folder
-# so Netlify caches it
-CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
-# set TERM variable for terminal output
-TERM = "xterm"
+  # cache Cypress binary in local "node_modules" folder
+  # so Netlify caches it
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  # set TERM variable for terminal output
+  TERM = "xterm"
 
 [[plugins]]
 # runs Cypress tests against the deployed URL
 package = "netlify-plugin-cypress"
-
-[plugins.inputs]
-    # these settings apply to the default step onSuccess
-    # in this case, we do not want to run any tests after deploy
-    enable = false
-
+  [plugins.inputs]
+  record = true
 
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
