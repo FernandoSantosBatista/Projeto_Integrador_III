@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <div class="container col-8">
+    <div class="container">
       <h3 class="text-start">
         Como conseguir gratuitamente fórmula especial para bebês com APLV
       </h3>

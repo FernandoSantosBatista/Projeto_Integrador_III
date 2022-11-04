@@ -1,66 +1,66 @@
 <template>
   <body>
-  <div class="form container">
-    <div class="row">
-      <div class="text-center">
-        <h1 class="titulo">Área de Cadastros</h1>
-        <p>Cadastre-se para receber doação</p>
+    <div class="form container">
+      <div class="row">
+        <div class="text-center">
+          <h1 class="titulo">Área de Cadastros</h1>
+          <p>Cadastre-se para receber doação</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container col-md-12 col-lg-8 col-xl-6">
-    <hr />
-    <div class="mb-3">
-      <label for="title" class="form-label">Nome</label>
-      <input
-        type="text"
-        v-model="donee.name"
-        class="form-control"
-        autocomplete="off"
-        id="name"
-      />
-    </div>
+    <div class="container col-md-12 col-lg-8 col-xl-6">
+      <hr />
+      <div class="mb-3">
+        <label for="title" class="form-label">Nome</label>
+        <input
+          type="text"
+          v-model="donee.name"
+          class="form-control"
+          autocomplete="off"
+          id="name"
+        />
+      </div>
 
-    <div class="mb-3">
-      <label for="title" class="form-label">Bairro</label>
-      <input
-        type="text"
-        v-model="donee.district"
-        class="form-control"
-        autocomplete="off"
-        id="district"
-      />
-    </div>
+      <div class="mb-3">
+        <label for="title" class="form-label">Bairro</label>
+        <input
+          type="text"
+          v-model="donee.district"
+          class="form-control"
+          autocomplete="off"
+          id="district"
+        />
+      </div>
 
-    <div class="mb-3">
-      <label for="city" class="form-label">Cidade</label>
-      <input
-        type="text"
-        v-model="donee.city"
-        class="form-control"
-        autocomplete="off"
-        id="city"
-      />
-    </div>
+      <div class="mb-3">
+        <label for="city" class="form-label">Cidade</label>
+        <input
+          type="text"
+          v-model="donee.city"
+          class="form-control"
+          autocomplete="off"
+          id="city"
+        />
+      </div>
 
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input
-        type="email"
-        v-model="donee.email"
-        class="form-control"
-        autocomplete="off"
-        id="email"
-      />
-    </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          v-model="donee.email"
+          class="form-control"
+          autocomplete="off"
+          id="email"
+        />
+      </div>
 
-    <div class="button d-md-flex justify-content-md-end">
-      <button @click="store" class="btn btn-outline-primary btn-lg px-5">
-        Enviar
-      </button>
+      <div class="button d-md-flex justify-content-md-end">
+        <button @click="store" class="btn btn-outline-primary btn-lg px-5">
+          Enviar
+        </button>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </template>
 
 <script>
@@ -75,7 +75,7 @@ export default {
   methods: {
     ...mapActions(useDoneeStore, ["getData", "storeData"]),
     store() {
-      this.storeData()
+      this.storeData();
       this.$swal({
         icon: "success",
         title: "Cadastro efetuado com sucesso",
@@ -95,7 +95,7 @@ export default {
 .form {
   margin-top: 80px;
 }
-.form-control{
+.form-control {
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
 }

@@ -1,6 +1,6 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe("My First Test", () => {
+describe("Test 01", () => {
   it("visits the app root url", () => {
     cy.visit("https://apoioaplv.netlify.app/");
     cy.get("h2").should("contain", "O que é APLV ??");
@@ -13,7 +13,7 @@ describe("My First Test", () => {
     cy.go("forward");
   }),
     it("cy.visit() - visit a remote url", () => {
-      cy.visit("https://apoioaplv.netlify.app//doar", {
+      cy.visit("https://apoioaplv.netlify.app/doar", {
         timeout: 50000,
         onBeforeLoad(contentWindow) {
           // contentWindow is the remote page's window object
@@ -25,23 +25,22 @@ describe("My First Test", () => {
         },
       });
     });
+
+  // request test case
   it("cy.request() - make an XHR request", () => {
-    // https://on.cypress.io/request
-    cy.request("https://admin-apoioaplv.herokuapp.com/donor/").should(
+    cy.visit("https://admin-apoioaplv.herokuapp.com/donee/");
+    cy.request("https://admin-apoioaplv.herokuapp.com/donee/").should(
       (response) => {
         expect(response.status).to.eq(200);
-        // the server sometimes gets an extra comment posted from another machine
-        // which gets returned as 1 extra object
       }
     );
   });
   it("cy.request() - make an XHR request", () => {
-    // https://on.cypress.io/request
-    cy.request("https://admin-apoioaplv.herokuapp.com/donee/").should(
+    cy.visit("https://admin-apoioaplv.herokuapp.com/donor/");
+
+    cy.request("https://admin-apoioaplv.herokuapp.com/donor/").should(
       (response) => {
         expect(response.status).to.eq(200);
-        // the server sometimes gets an extra comment posted from another machine
-        // which gets returned as 1 extra object
       }
     );
   });
